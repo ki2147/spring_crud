@@ -3,7 +3,6 @@ package com.ecom.prodmanager.service;
 import com.ecom.prodmanager.model.Product;
 import com.ecom.prodmanager.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

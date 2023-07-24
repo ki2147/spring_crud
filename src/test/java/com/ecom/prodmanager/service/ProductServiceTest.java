@@ -2,7 +2,6 @@ package com.ecom.prodmanager.service;
 
 import com.ecom.prodmanager.model.Product;
 import com.ecom.prodmanager.repository.ProductRepository;
-import jakarta.validation.ConstraintViolationException;
 import org.bson.types.ObjectId;
 import org.junit.jupiter.api.Test;
 import org.mockito.*;
@@ -129,7 +128,7 @@ public class ProductServiceTest {
         Mockito.doNothing().when(productRepository).deleteById(productId);
 
         // Invoke the method under test
-        productService.deleteProduct(productId.toString());
+        productService.deleteProduct(productId);
 
         // Verify the interaction with ProductRepository
         verify(productRepository, times(1)).deleteById(productId);
