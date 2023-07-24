@@ -2,28 +2,21 @@ package com.ecom.prodmanager.service;
 
 import com.ecom.prodmanager.model.Product;
 import com.ecom.prodmanager.repository.ProductRepository;
-import com.mongodb.client.result.UpdateResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.Set;
 
 @Service
 public class ProductService {
     private final ProductRepository productRepository;
-    private final MongoTemplate mongoTemplate;
 
     @Autowired
-    public ProductService(ProductRepository productRepository, MongoTemplate mongoTemplate) {
+    public ProductService(ProductRepository productRepository) {
         this.productRepository = productRepository;
-        this.mongoTemplate = mongoTemplate;
     }
 
     public Optional<Product> getProductById(String id) {

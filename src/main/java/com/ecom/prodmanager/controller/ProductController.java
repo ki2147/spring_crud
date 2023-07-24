@@ -2,10 +2,7 @@ package com.ecom.prodmanager.controller;
 
 import com.ecom.prodmanager.model.Product;
 import com.ecom.prodmanager.service.ProductService;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.validation.Valid;
-import org.bson.Document;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
